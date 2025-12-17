@@ -5,7 +5,7 @@ Program ini merupakan implementasi struktur data **Binary Search Tree (BST)** da
 
 ## Deskripsi Singkat
 
-BST adalah struktur data pohon biner yang setiap nilai simpul (node) pada subtree kiri selalu lebih kecil daripada nilai simpul induknya, dan setiap nilai di subtree kanan selalu lebih besar. BST mendukung operasi seperti **insert**, **search**, **traversal**, dan **delete** dengan kompleksitas rata-rata *O(log n)*. ([Wikipedia][1])
+BST adalah struktur data pohon biner yang setiap nilai simpul (node) pada subtree kiri selalu lebih kecil daripada nilai simpul induknya, dan setiap nilai di subtree kanan selalu lebih besar. BST mendukung operasi seperti **insert**, **search**, **traversal**, dan **delete** dengan kompleksitas rata-rata *O(log n)*. 
 
 Program ini membaca data dari file (misal `dataMahasiswa.dat`) dan kemudian melakukan operasi BST seperti penambahan data dan pencarian. File utama kode adalah `TugasPTB_124240092.cpp`.
 
@@ -64,7 +64,7 @@ Setelah menjalankan program:
 
 ## Tentang Binary Search Tree
 
-Binary Search Tree adalah struktur data berbasis pohon biner yang memungkinkan operasi pencarian, penyisipan, dan penghapusan dilakukan dengan relatif cepat jika pohon terjaga seimbang. Elemen kiri dari sebuah node selalu lebih kecil dari node tersebut, sedangkan elemen kanan selalu lebih besar. ([Wikipedia][1])
+Binary Search Tree adalah struktur data berbasis pohon biner yang memungkinkan operasi pencarian, penyisipan, dan penghapusan dilakukan dengan relatif cepat jika pohon terjaga seimbang. Elemen kiri dari sebuah node selalu lebih kecil dari node tersebut, sedangkan elemen kanan selalu lebih besar.
 
 ## License
 
