@@ -1,73 +1,112 @@
 
-# Tugas Binary Search Tree
+# Tugas Binary Search Tree Mahasiswa
 
-Program ini merupakan implementasi struktur data **Binary Search Tree (BST)** dalam bahasa **C++** untuk keperluan tugas kuliah. BST digunakan untuk menyimpan dan mencari data secara efisien berdasarkan kunci tertentu. 
+Program ini merupakan implementasi **Binary Search Tree (BST)** menggunakan bahasa **C++** untuk mengelola data mahasiswa.
+Data mahasiswa disimpan secara permanen dalam file biner `dataMahasiswa.dat` dan dapat dibaca kembali untuk membangun ulang BST.
 
-## Deskripsi Singkat
+BST disusun berdasarkan **NIM** sebagai key utama.
 
-BST adalah struktur data pohon biner yang setiap nilai simpul (node) pada subtree kiri selalu lebih kecil daripada nilai simpul induknya, dan setiap nilai di subtree kanan selalu lebih besar. BST mendukung operasi seperti **insert**, **search**, **traversal**, dan **delete** dengan kompleksitas rata-rata *O(log n)*. 
+## Deskripsi Program
 
-Program ini membaca data dari file (misal `dataMahasiswa.dat`) dan kemudian melakukan operasi BST seperti penambahan data dan pencarian. File utama kode adalah `TugasPTB_124240092.cpp`.
+Program menyediakan menu untuk:
+
+* Menambah data mahasiswa
+* Mencari mahasiswa berdasarkan NIM
+* Menampilkan seluruh data mahasiswa menggunakan InOrder Traversal
+* Menghapus data mahasiswa
+* Menyimpan ulang data BST ke file
+
+Setiap kali program membaca data, BST akan direkonstruksi dari file agar data tetap konsisten.
+
+## Struktur Data
+
+### Struct treeMahasiswa
+
+Digunakan sebagai node pada Binary Search Tree.
+
+* nama
+* nim
+* akar
+* prev (anak kiri)
+* next (anak kanan)
+
+### Struct dataMahasiswa
+
+Digunakan untuk penyimpanan data ke file biner.
+
+* nama
+* nim
+* akar
 
 ## Fitur Program
 
-* **Membaca data mahasiswa** dari file eksternal
-* **Menyisipkan (insert)** node ke dalam BST
-* **Pencarian (search)** data dalam BST
-* **Traversal BST** dalam urutan tertentu (inorder / preorder / postorder)
-* **Menampilkan hasil pencarian** ke layar
+### 1. Tambah Mahasiswa
+
+* Input nama dan NIM
+* Data dimasukkan ke BST berdasarkan NIM
+* Data langsung disimpan ke file
+
+### 2. Cari Mahasiswa
+
+* Pencarian berdasarkan NIM
+* Menggunakan mekanisme pencarian BST
+
+### 3. Cetak Isi Pohon
+
+* Menampilkan seluruh data mahasiswa
+* Menggunakan InOrder Traversal (kiri - root - kanan)
+
+### 4. Hapus Mahasiswa
+
+* Menghapus node BST berdasarkan NIM
+* Menangani kasus:
+
+  * Node tanpa anak
+  * Node dengan satu anak
+  * Node dengan dua anak
+* Setelah penghapusan, file ditulis ulang dari BST terbaru
+
+## Algoritma yang Digunakan
+
+* Binary Search Tree
+* InOrder Traversal
+* File handling (fread dan fwrite)
+* Rekonstruksi BST dari file
 
 ## Struktur Folder
 
 ```
 /
-├─ TugasPTB_124240092.cpp        # Source C++ program utama
-├─ dataMahasiswa.dat             # File data awal mahasiswa
-└─ README.md                     # Penjelasan proyek
+├─ TugasPTB_124240092.cpp
+├─ dataMahasiswa.dat
+└─ README.md
 ```
 
-## Cara Menjalankan
+## Cara Menjalankan Program
 
-1. **Clone** repository:
-
-   ```
-   git clone https://github.com/eufratt/Tugas-Binary-Search-Tree.git
-   ```
-
-2. **Masuk ke direktori** project:
+1. Compile program:
 
    ```
-   cd Tugas-Binary-Search-Tree
+   g++ TugasPTB_124240092.cpp -o bst_mahasiswa
    ```
 
-3. **Compile program** dengan g++ (atau compiler C++ lain):
+2. Jalankan program:
 
    ```
-   g++ TugasPTB_124240092.cpp -o bst_program
+   ./bst_mahasiswa
    ```
 
-4. **Jalankan program**:
+Catatan:
+Program menggunakan `system("cls")` dan `system("pause")` sehingga disarankan dijalankan di Windows.
 
-   ```
-   ./bst_program
-   ```
+## Tujuan Pembelajaran
 
-   Sesuaikan nama output dan path file `dataMahasiswa.dat` jika perlu.
-
-## Contoh Penggunaan
-
-Setelah menjalankan program:
-
-1. Program akan memuat data dari file `dataMahasiswa.dat`.
-2. Kamu bisa memilih menu untuk mencari data berdasarkan kunci tertentu.
-3. Hasil pencarian BST ditampilkan di layar.
-
-## Tentang Binary Search Tree
-
-Binary Search Tree adalah struktur data berbasis pohon biner yang memungkinkan operasi pencarian, penyisipan, dan penghapusan dilakukan dengan relatif cepat jika pohon terjaga seimbang. Elemen kiri dari sebuah node selalu lebih kecil dari node tersebut, sedangkan elemen kanan selalu lebih besar.
+* Memahami konsep Binary Search Tree
+* Mengimplementasikan insert, search, traversal, dan delete
+* Menggabungkan BST dengan penyimpanan file
+* Melatih penggunaan pointer dan manajemen memori
 
 ## License
 
-Project ini bersifat open source dan dapat digunakan untuk **pembelajaran atau tugas kuliah**.
-
+Program ini dibuat untuk keperluan **pembelajaran dan tugas kuliah**.
 
