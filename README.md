@@ -1,7 +1,7 @@
 
 # Tugas Binary Search Tree
 
-Program ini merupakan implementasi struktur data **Binary Search Tree (BST)** dalam bahasa **C++** untuk keperluan tugas kuliah. BST digunakan untuk menyimpan dan mencari data secara efisien berdasarkan kunci tertentu. ([Wikipedia][1])
+Program ini merupakan implementasi struktur data **Binary Search Tree (BST)** dalam bahasa **C++** untuk keperluan tugas kuliah. BST digunakan untuk menyimpan dan mencari data secara efisien berdasarkan kunci tertentu. 
 
 ## Deskripsi Singkat
 
